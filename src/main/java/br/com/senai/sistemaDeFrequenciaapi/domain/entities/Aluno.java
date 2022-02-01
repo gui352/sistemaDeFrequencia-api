@@ -23,8 +23,6 @@ public class Aluno {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long nCadastro;
 
-    @Size(max = 11, min = 11)
-    @NotNull
     private Long cpf;
 
     private LocalDate dataNascimento;
@@ -35,8 +33,5 @@ public class Aluno {
 
     private Long telefone;
 
-    private String genero;
-
     private  Long turma;
-
 }
