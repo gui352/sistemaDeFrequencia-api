@@ -34,9 +34,8 @@ public class AlunoResource {
        return alunoService.editar(nCadastro, aluno);
     }
 
-//    @DeleteMapping=("/apagar/{nCadastro}")
-//    public Aluno deletar(@PathVariable Long nCadastro){
-//        return alunoService.deletar(nCadastro);
-//    }
-
+    @DeleteMapping("/apagar/{nCadastro}")
+    public void deletar(@PathVariable Long nCadastro){
+        alunoService.deletar(nCadastro);
+    }
 }
