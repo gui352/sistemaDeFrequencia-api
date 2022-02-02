@@ -16,11 +16,15 @@ public class ChamadaResource {
 
     @PostMapping("/cadastrar")
     @ResponseStatus(HttpStatus.CREATED)
-    public List<Chamada> cadastrarChamada(@RequestBody List<Chamada> chamadas){
-        chamadas.forEach(chamada -> {
-            Chamada novaChamada = chamada;
-            chamadaService.cadastrar(chamada);
+    public List<Chamada> CadastrarFrequencia(@RequestBody List<Chamada> frequencias){
+        frequencias.forEach(frequencia -> {
+            chamadaService.cadastrar(frequencia);
         });
-        return chamadas;
+        return frequencias;
+    }
+
+    @GetMapping("/listar")
+    public List<Chamada> Listar(){
+        return chamadaService.listar();
     }
 }
