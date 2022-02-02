@@ -23,9 +23,8 @@ public class AlunoService {
         return alunoRepository.findAll();
     }
 
-    public Aluno buscar(Long id){
-        return alunoRepository.findById(id)
-                .orElseThrow(() -> new NegocioException("Pessoa não encontrada."));
+    public Aluno buscar(Long nCadastro) {
+        return alunoRepository.findById(nCadastro).orElseThrow();
     }
 
     public Aluno editar(Long nCadastro, Aluno aluno){

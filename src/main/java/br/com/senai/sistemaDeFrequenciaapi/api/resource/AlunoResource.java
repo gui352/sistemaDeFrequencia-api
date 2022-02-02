@@ -24,6 +24,11 @@ public class AlunoResource {
         return novoAluno;
     }
 
+    @GetMapping("/buscar/{nCadastro}")
+    public Aluno buscar(@PathVariable Long nCadastro){
+        return alunoService.buscar(nCadastro);
+    }
+
     @GetMapping("/listar")
     public List<Aluno> listar(){
         return alunoService.listar();
