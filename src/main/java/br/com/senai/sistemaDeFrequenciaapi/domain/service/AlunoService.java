@@ -38,7 +38,7 @@ public class AlunoService {
         Aluno aluno = alunoRepository.findById(nCadastro).orElseThrow();
         AlunoDTO alunoDTO = new AlunoDTO();
         alunoDTO.setNome(aluno.getNome());
-        alunoDTO.setCpf(alunoDTO.getCpf());
+        alunoDTO.setCpf(aluno.getCpf());
         alunoDTO.setCadastro(aluno.getCadastro());
         alunoDTO.setEmail(aluno.getEmail());
         alunoDTO.setDataNascimento(aluno.getDataNascimento());
