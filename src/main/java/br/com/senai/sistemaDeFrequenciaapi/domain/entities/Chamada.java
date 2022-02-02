@@ -22,7 +22,7 @@ public class Chamada {
 
     private LocalDate dataChamada;
 
-    private Long idAluno;
+    private Long idaluno;
 
     private boolean presenca;
 }

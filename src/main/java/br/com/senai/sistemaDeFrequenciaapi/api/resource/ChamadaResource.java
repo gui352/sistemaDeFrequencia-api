@@ -1,6 +1,7 @@
 package br.com.senai.sistemaDeFrequenciaapi.api.resource;
 
 import br.com.senai.sistemaDeFrequenciaapi.domain.entities.Chamada;
+import br.com.senai.sistemaDeFrequenciaapi.domain.entities.ChamadaDTO;
 import br.com.senai.sistemaDeFrequenciaapi.domain.service.ChamadaService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -24,7 +25,7 @@ public class ChamadaResource {
     }
 
     @GetMapping("/listar")
-    public List<Chamada> Listar(){
+    public List<ChamadaDTO> Listar(){
         return chamadaService.listar();
     }
 }

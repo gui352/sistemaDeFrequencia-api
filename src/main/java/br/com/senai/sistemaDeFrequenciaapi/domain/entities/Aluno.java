@@ -21,7 +21,7 @@ public class Aluno {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long nCadastro;
+    private Long cadastro;
 
     private Long cpf;
 

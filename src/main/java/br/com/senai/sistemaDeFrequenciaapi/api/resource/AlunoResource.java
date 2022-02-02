@@ -1,6 +1,7 @@
 package br.com.senai.sistemaDeFrequenciaapi.api.resource;
 
 import br.com.senai.sistemaDeFrequenciaapi.domain.entities.Aluno;
+import br.com.senai.sistemaDeFrequenciaapi.domain.entities.AlunoDTO;
 import br.com.senai.sistemaDeFrequenciaapi.domain.repository.AlunoRepository;
 import br.com.senai.sistemaDeFrequenciaapi.domain.service.AlunoService;
 import lombok.AllArgsConstructor;
@@ -28,6 +29,9 @@ public class AlunoResource {
     public Aluno buscar(@PathVariable Long nCadastro){
         return alunoService.buscar(nCadastro);
     }
+
+    @GetMapping("/freq/{nCadastro}")
+    public AlunoDTO freq(@PathVariable Long nCadastro){ return alunoService.buscarAluno(nCadastro);}
 
     @GetMapping("/listar")
     public List<Aluno> listar(){
